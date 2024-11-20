@@ -1,3 +1,4 @@
+using CrudOperationsInNetCore.Controllers;
 using CrudOperationsInNetCore.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,9 +14,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("BrandCS"))
 
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+ 
+
 
 var app = builder.Build();
 
