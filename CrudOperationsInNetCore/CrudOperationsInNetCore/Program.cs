@@ -29,10 +29,22 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    //app.UseSwagger();
+    //app.UseSwaggerUI(c =>
+    //{
+    //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
+    //});
+
 }
+
+
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseDeveloperExceptionPage(); // Add this in your middleware pipeline (only in Development).
+
 
 app.Run();

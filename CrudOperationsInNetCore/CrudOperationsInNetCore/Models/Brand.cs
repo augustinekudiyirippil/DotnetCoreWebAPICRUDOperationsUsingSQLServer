@@ -13,10 +13,9 @@
 
         public string? IsActive { get; set; }
 
-
-
-
-
-
+        public static implicit operator Brand(List<Brand> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
